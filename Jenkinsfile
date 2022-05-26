@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('create files') {
       step{
-        sh 'touch file1.txt'
+        sh 'echo "Hello World"'
       }
     }
   }
