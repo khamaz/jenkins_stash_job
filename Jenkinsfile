@@ -10,6 +10,13 @@ pipeline {
         touch target/file3.war
         tree
         '''
+        stash(name: 'myStash')
+      }
+    }
+    stage ('check the file') {
+      steps {
+        unstash 'myStash'
+        sh 'tree'
       }
     }
   }
