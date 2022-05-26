@@ -3,7 +3,13 @@ pipeline {
   stages {
     stage ('create files') {
       steps {
-        sh 'echo "Hello World"'
+        sh '''
+        touch file.txt
+        mkdir -p target
+        touch target/file2.jar
+        touch target/file3.war
+        tree
+        '''
       }
     }
   }
