@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage ('create files') {
-      step{
+      steps {
         sh 'echo "Hello World"'
       }
     }
